@@ -1,0 +1,9 @@
+services:
+  biami:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../test:/opt/biami/bin/temp
+    image: biami
+    container_name: biami

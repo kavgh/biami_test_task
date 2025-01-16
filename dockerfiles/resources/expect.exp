@@ -1,0 +1,6 @@
+#!/bin/sh
+
+spawn core_run.sh
+expect "Enter your e-mail address here: "
+send "test\r"
+expect eof
