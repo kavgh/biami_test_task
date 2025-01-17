@@ -1,2 +1,3 @@
 dockerfiles/test_task.sh
-test
+test/*
+!test/import.tsv

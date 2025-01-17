@@ -1,0 +1,10 @@
+Stage	Business Task Name	Technical Task Name	Plugin	
+0	Dockerize BIAMI	Dockerize BIAMI	do_nothing	
+1	assign temp directory		run_command	runcommand=sed -i -e '/\/opt\/biami\/bin\/temp/s/\(\- \).*\(:.*$\)/\1|||temp_dir|||\2/' ../temp/dockerfiles/docker-compose.yaml
+2	assign env directory		run_command	runcommand=sed -i -e '/\/opt\/biami\/bin\/env/s/\(\- \).*\(:.*$\)/\1|||env_dir|||\2/' ../temp/dockerfiles/docker-compose.yaml
+3	spinout docker container	docker compose up	run_command	runcommand=docker compose -f ../temp/dockerfiles/docker-compose.yaml up
+				
+				
+				
+p	temp_dir	..\/temp		
+p	env_dir	..\/env		
