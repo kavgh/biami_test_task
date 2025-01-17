@@ -8,3 +8,4 @@ services:
       - ../env:/opt/biami/bin/env
     image: biami
     container_name: biami
+    command: ["core_run.sh", "--context_param", "cmd=requestprocess", "--context_param", "taskid=145", "--context_param", "mode=debug" ]
