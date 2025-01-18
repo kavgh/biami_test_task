@@ -4,8 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ../test:/opt/biami/bin/temp
-      - ../env:/opt/biami/bin/env
+      - ~/Downloads/bin/test:/opt/biami/bin/temp
+      - ~/Downloads/bin/env:/opt/biami/bin/env
+      - ~/Downloads/bin/temp/db:/opt/biami/bin/db
     image: biami
     container_name: biami
-    command: ["core_run.sh", "--context_param", "cmd=requestprocess", "--context_param", "taskid=145", "--context_param", "mode=debug" ]
+    command: ["core_run.sh", "--context_param", "cmd=requestprocess", "--context_param", "taskid=7" ]
